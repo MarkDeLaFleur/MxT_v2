@@ -1,6 +1,7 @@
 package com.markd.mxt_v2
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,9 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.markd.mxt_v2.ui.theme.MxT_v2Theme
+import org.opencv.android.OpenCVLoader
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (!OpenCVLoader.initDebug()) Log.e("OpenCVError", "Unable to load OpenCV!")
+        else   Log.d("OpenCVGood", "OpenCV loaded Successfully!")
+
+
         super.onCreate(savedInstanceState)
         setContent {
             MxT_v2Theme {
