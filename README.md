@@ -1,0 +1,3 @@
+# MxT_v2
+modification of my MxT built on an older version of android studio. Opting to use opencv4.7.0 using a shared Opencv library per the sdk's gradle.build file. There were a couple of options needed to make it compile with gradle agp 8.0. I have a separate repository for that called opencv4 that has the modified gradle.settings file as well as the gradle.build for App and for opencv4 dependency.
+mainly doing this to learn jetpack compose because I want to make the MxT UI's better. The opencv stuff will be pretty much the same, unless androidx.camera has changed a lot. Also modfying the pip counting to use minEnclosing circle instead of the SimpleblobDetector.
